@@ -63,7 +63,7 @@
         <h1>Access Your Exercises</h1>
         
         <label for="day">Select a Day:</label>
-        <select id="day" onchange="updatePasswordSection()">
+        <select id="day" onchange="updateExerciseOptions()">
             <option value="">--Select Day--</option>
             <option value="day1">Day 1</option>
             <option value="day2">Day 2</option>
@@ -71,12 +71,11 @@
         </select>
         
         <label for="exercise">Select an Exercise:</label>
-        <select id="exercise" onchange="updatePasswordSection()">
+        <select id="exercise">
             <option value="">--Select Exercise--</option>
             <!-- Options will be populated dynamically -->
         </select>
         
-        <!-- Password Section -->
         <div id="passwordSection">
             <label id="passwordLabel" for="password"></label>
             <input type="password" id="password" placeholder="Enter Password">
