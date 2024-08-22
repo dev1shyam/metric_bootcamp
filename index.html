@@ -5,7 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metric Bootcamp</title>
     <style>
-        /* Your existing CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.png'); /* Ensure the image URL is correct */
+            background-size: cover; /* Ensure the image covers the entire body */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            color: #333; /* Ensure text is visible */
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        select, input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: calc(100% - 22px); /* Adjust width to account for padding and border */
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #passwordSection {
+            display: none;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+        }
     </style>
     <script src="script.js" defer></script> <!-- Link to your JavaScript file -->
 </head>
@@ -18,13 +67,16 @@
             <option value="">--Select Day--</option>
             <option value="day1">Day 1</option>
             <option value="day2">Day 2</option>
+            <!-- Add more days as needed -->
         </select>
         
         <label for="exercise">Select an Exercise:</label>
         <select id="exercise" onchange="updatePasswordSection()">
             <option value="">--Select Exercise--</option>
+            <!-- Options will be populated dynamically -->
         </select>
         
+        <!-- Password Section -->
         <div id="passwordSection">
             <label id="passwordLabel" for="password"></label>
             <input type="password" id="password" placeholder="Enter Password">
