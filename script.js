@@ -47,7 +47,7 @@ function updateExerciseOptions() {
         }
 
         passwordSection.style.display = 'block';
-        passwordLabel.textContent = `Password is the exercise answer!`;
+        passwordLabel.textContent = `Password is the exercise answer:`;
 
         submitBtn.onclick = function() {
             checkPassword(day, exerciseSelect.value);
@@ -63,14 +63,14 @@ function checkPassword(day, exercise) {
     const gistUrl = gists[day] ? gists[day][exercise] : null;
 
     if (!correctPassword || !gistUrl) {
-        alert('Invalid day or exercise selected.');
+        alert('Oops! Wrong one');
         return;
     }
 
     if (enteredPassword === correctPassword) {
         window.location.href = gistUrl;
     } else {
-        alert('Incorrect password');
+        alert('Oops! Wrong one');
     }
 }
 
