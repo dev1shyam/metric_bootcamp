@@ -47,7 +47,7 @@ function updateExerciseOptions() {
         }
 
         passwordSection.style.display = 'block';
-        passwordLabel.textContent = `Enter password for ${day.replace('day', 'Day ')} Exercise:`;
+        passwordLabel.textContent = `Password is the exercise answer!`;
 
         submitBtn.onclick = function() {
             checkPassword(day, exerciseSelect.value);
