@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metric Bootcamp</title>
+    <style>
+        /* Your existing CSS styles */
+    </style>
+    <script src="script.js" defer></script> <!-- Link to your JavaScript file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Access Your Exercises</h1>
+        
+        <label for="day">Select a Day:</label>
+        <select id="day" onchange="updatePasswordSection()">
+            <option value="">--Select Day--</option>
+            <option value="day1">Day 1</option>
+            <option value="day2">Day 2</option>
+        </select>
+        
+        <label for="exercise">Select an Exercise:</label>
+        <select id="exercise" onchange="updatePasswordSection()">
+            <option value="">--Select Exercise--</option>
+        </select>
+        
+        <div id="passwordSection">
+            <label id="passwordLabel" for="password"></label>
+            <input type="password" id="password" placeholder="Enter Password">
+            <button id="submitBtn">Submit</button>
+        </div>
+    </div>
+</body>
+</html>
