@@ -68,7 +68,8 @@ function checkPassword(day, exercise) {
     }
 
     if (enteredPassword === correctPassword) {
-        window.location.href = gistUrl;
+      //  window.location.href = gistUrl;
+        window.open(gistUrl, '_blank');
     } else {
         alert('Oops! Wrong one');
     }
